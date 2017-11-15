@@ -60,7 +60,7 @@ public class Rest {
 
     @POST
     @Path("/new/Pedido/{usuario}")
-    @Consumes(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.APPLICATION_JSON)
     public Response newPedido(@PathParam("usuario") String usuario, List<Producto> productos) {
 
         Pedido pedido = new Pedido(usuario);
