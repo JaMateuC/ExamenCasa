@@ -1,0 +1,148 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ExamenCasa",
+		"_postman_id": "e9900cde-123a-aa2a-5af6-a3380ecf5277",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/examen/new/Pedido/Manolo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Successful POST request\"] = responseCode.code === 201 || responseCode.code === 202;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:8080/examen/new/Pedido/Manolo",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n\t\"nombre\" : \"Queso\",\n\t\"coste\" : 5,\n\t\"numComprado\" : 1\n}]"
+				},
+				"description": "Añade pedido a usuario manolo"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/examen/new/Pedido/Pepito",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Successful POST request\"] = responseCode.code === 201 || responseCode.code === 202;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:8080/examen/new/Pedido/Pepito",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"nombre\" : \"Queso\",\n\t\t\"coste\" : 5,\n\t\t\"numComprado\" : 1\n\t},\n\t{\n\t\t\"nombre\" : \"Agua\",\n\t\t\"coste\" : 0.8,\n\t\t\"numComprado\" : 1\n\t},\n\t{\n\t\t\"nombre\" : \"Queso\",\n\t\t\"coste\" : 5,\n\t\t\"numComprado\" : 1\n\t},\n\t{\n\t\t\"nombre\" : \"Cocacola\",\n\t\t\"coste\" : 2,\n\t\t\"numComprado\" : 1\n\t}\n]"
+				},
+				"description": "Añade pedido a usuario pepito"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/examen/got/pedidos/servir",
+			"request": {
+				"url": "localhost:8080/examen/got/pedidos/servir",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Realiza pedido en cola"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/examen/got/pedidos/servir",
+			"request": {
+				"url": "localhost:8080/examen/got/pedidos/servir",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Realiza pedido en cola"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/examen/got/pedidos/Manolo",
+			"request": {
+				"url": "localhost:8080/examen/got/pedidos/Manolo",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Devuelve pedidos de manolo"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/examen/got/pedidos/Pepito",
+			"request": {
+				"url": "localhost:8080/examen/got/pedidos/Pepito",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Devuelve pedidos de manolo"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/examen/got/listaOrdenada/precio",
+			"request": {
+				"url": "localhost:8080/examen/got/listaOrdenada/precio",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"nombre\" : \"Queso\",\n\t\t\"coste\" : 5,\n\t\t\"numComprado\" : 1\n\t},\n\t{\n\t\t\"nombre\" : \"Agua\",\n\t\t\"coste\" : 0.8,\n\t\t\"numComprado\" : 1\n\t},\n\t{\n\t\t\"nombre\" : \"Queso\",\n\t\t\"coste\" : 5,\n\t\t\"numComprado\" : 1\n\t},\n\t{\n\t\t\"nombre\" : \"Cocacola\",\n\t\t\"coste\" : 2,\n\t\t\"numComprado\" : 1\n\t}\n]"
+				},
+				"description": "Recibe lista ordenada precio\n"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/examen/got/listaOrdenada/numVentas",
+			"request": {
+				"url": "localhost:8080/examen/got/listaOrdenada/numVentas",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Recibe lista productos ordenada por num ventas"
+			},
+			"response": []
+		}
+	]
+}
