@@ -1,7 +1,6 @@
 Tabla Manager
 |     ---      |      ---      |         ---       |
 | List<Pedido> | Queue<Pedido> | Hashmap<Producto> |
-
 |     ---      |      ---      |         ---       |
 	|	     	|	   |
 	|		|	   |
@@ -11,7 +10,6 @@ Tabla Manager
 	|		|	   +--->Tabla Productos Generales
 	|		|		|   ---  |  ---  |      ---     |
 	|		|		| Nombre | Coste | Num comprado |
-
 	|		|		|   ---  |  ---  |      ---     |
 	|		|
 	|		|
@@ -23,12 +21,10 @@ Tabla Manager
 	|						+-------------->Tabla Lista Productos lista
 	|								|   ---  |  ---  |      ---     |
 	+------>Tabla Lista Pedidos Realizados				| Nombre | Coste | Num comprado |
-
 		|   ---   |        ---        |				|   ---  |  ---  |      ---     |
 		| Usuario | Hashmap<Producto> |
 		|   ---   |        ---        |
 					+-------->Tabla Lista Productos lista
 						  |   ---  |  ---  |      ---     |
 						  | Nombre | Coste | Num comprado |
-
 						  |   ---  |  ---  |      ---     |
