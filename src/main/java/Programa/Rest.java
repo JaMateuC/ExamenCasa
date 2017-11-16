@@ -60,14 +60,14 @@ public class Rest {
 
     @POST
     @Path("/new/Pedido/{usuario}")
-    @Consumes(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.APPLICATION_JSON)
     public Response newPedido(@PathParam("usuario") String usuario, List<Producto> productos) {
 
         Pedido pedido = new Pedido(usuario);
 
         pedido.addListaProductosPedido(productos);
-
-        if(this.pmi.getInstance().realizarPedido(pedido)){
+        Boolean res = this.pmi.getInstance().realizarPedido(pedido);
+        if(res){
             return Response.status(201).entity("Pedido anadido").build();
         }
         return Response.status(409).entity("Error al anadir pedido").build();

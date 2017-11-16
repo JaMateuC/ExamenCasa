@@ -155,7 +155,8 @@ public class ProductManagerImpl implements ProductManager{
         List<Pedido> pedidosUsuario = new ArrayList<Pedido>();
 
         for (Pedido pedido : this.listaPedidosRealizados){
-            if(pedido.getUsuario() == usuario){
+            if(usuario.equals(pedido.getUsuario())){
+                logger.debug("correcto");
                 pedidosUsuario.add(pedido);
             }
         }
