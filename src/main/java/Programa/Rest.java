@@ -74,4 +74,13 @@ public class Rest {
 
     }
 
+    @GET
+    @Path("/login")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getLogin() {
+
+        return "true";
+
+    }
+
 }
